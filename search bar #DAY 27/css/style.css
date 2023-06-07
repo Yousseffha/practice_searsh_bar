@@ -1,0 +1,75 @@
+/* start variables */
+:root {
+    --Blue: #3F6FE8;
+    --White: #fff;
+}
+/* end variables */
+/* start global rules */
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Blue);
+}
+.container {
+    position: relative;
+    background-color: var(--White);
+    border-radius: 5px;
+    width: 45px;
+}
+/* end global rules */
+.container i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+}
+#search {
+    left: 13px;
+    color: var(--Blue);
+}
+#x-mark {
+    right: -25px;
+    color: var(--White);
+    opacity: 0;
+}
+.container input {
+    height: 40px;
+    padding-left: 40px;
+    border: none;
+    outline-color: transparent;
+    border-radius: 5px;
+    width: 0;
+}
+
+@keyframes Inputwidth {
+    0% {width: 0;}
+    100%{width: 100%;}
+}
+@keyframes Containerwidth {
+    0% {width: 45px;}
+    100%{width: 250px;}
+}
+@keyframes Opacity {
+    0% {opacity: 0;}
+    100%{opacity: 1;}
+}
+@keyframes InputwidthReverse {
+    0% {width: 100%;}
+    100%{width: 0;}
+}
+@keyframes ContainerwidthReverse {
+    0% {width: 250px;}
+    100%{width: 45px;}
+}
+@keyframes OpacityReverse {
+    0% {opacity: 1;}
+    100%{opacity: 0;}
+}
